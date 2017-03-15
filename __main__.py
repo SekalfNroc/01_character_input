@@ -26,9 +26,15 @@ while True: # Broken on success
 final_age = 100
 final_year = user.year_when_aged(final_age)
 
-print("%s will be %d years old in the year %d" % (
-    user.name,
-    final_age,
-    final_year
-))
+try:
+    times = int(input("How many times do you want to hear it?\n> "))
+except:
+    times = 1
+
+for i in range(0, times):
+    print("%s will be %d years old in the year %d" % (
+        user.name,
+        final_age,
+        final_year
+    ))
 
